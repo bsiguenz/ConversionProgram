@@ -14,8 +14,6 @@ import static java.lang.Thread.sleep;
 
 public class ConvertMenu
 {
-
-  
   //constant variables for easy editing of values
   final int zero = 0;
   final int one = 1;
@@ -32,6 +30,8 @@ public class ConvertMenu
   final int twelve = 12;
   final int thirteen = 13;
   final int fourteen = 14;
+  final int fifteen = 15;
+  final int sixteen = 16;
   final int exit = 99;
   
   /**
@@ -67,7 +67,7 @@ public class ConvertMenu
       userMenuChoice = inputInteger("Enter choice: "); // gets user's choice
       
       // print error if user did not enter a correct choice
-      if (userMenuChoice < zero || (userMenuChoice > fourteen && userMenuChoice != exit))
+      if (userMenuChoice < zero || (userMenuChoice > sixteen && userMenuChoice != exit))
       {
         System.out.println("You entered: " + userMenuChoice + " which is not a valid choice");
         System.out.println("Please choose again");
@@ -188,6 +188,16 @@ public class ConvertMenu
             //System.out.println("Kilogram = " + nf.format(result));
             break;
           case fourteen:
+            userNumber = numberInStringFormat("Enter Miles per Hour: ");
+            cv.convertMphToKph(userNumber);
+            cv.printKPH();
+            break;
+          case fifteen:
+            userNumber = numberInStringFormat("Enter Kilometers per Hour: ");
+            cv.convertKphToMph(userNumber);
+            cv.printMPH();
+            break;
+          case sixteen:
             cv.chooseDecimal();
             break;
           case exit: // allows the user to terminate the program
@@ -196,6 +206,7 @@ public class ConvertMenu
           default:
             System.out.println("Error in driver switch");
             break;
+
         }
       }
       sleep(1000); // wait 1 second to display menu again and allow user to see the result/output
@@ -226,7 +237,9 @@ public class ConvertMenu
     System.out.println("*    Convert From Gram to Ounce            *            11           *");
     System.out.println("*    Convert From Pound to Kilogram        *            12           *");
     System.out.println("*    Convert From Kilogram to Pound        *            13           *");
-    System.out.println("*    Set the decimal point accuracy        *            14           *");
+    System.out.println("*    Convert From MPH to KPH               *            14           *");
+    System.out.println("*    Convert From KPH to MPH               *            15           *");
+    System.out.println("*    Set the decimal point accuracy        *            16           *");
     System.out.println("*           Quit Program                   *            99           *");
     System.out.println("**********************************************************************\n");
   }
