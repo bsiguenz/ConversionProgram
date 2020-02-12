@@ -13,9 +13,10 @@ import java.util.Scanner;
 
 public class Conversion
 {
+
   Locale locale = Locale.ENGLISH;
   NumberFormat nf = NumberFormat.getNumberInstance(locale);
-
+  final double KM_CONSTANT = 1.6093440;
   // Temp
   private double fahrenheit;
   private double celsius;
@@ -33,6 +34,10 @@ public class Conversion
   private double gram;
   private double pound;
   private double kilogram;
+  private double miles_per_hour;
+  private double kilometers_per_hour;
+  //speed
+
 
   //default constructor
   Conversion(){
@@ -52,6 +57,8 @@ public class Conversion
     gram = 0;
     pound = 0;
     kilogram = 0;
+    miles_per_hour = 0;
+    kilometers_per_hour = 0;
     nf.setMinimumFractionDigits(2);
     nf.setMaximumFractionDigits(2);
   }
@@ -285,6 +292,24 @@ public class Conversion
     return(num2);
   }
 
+  public void convertMphToKph (String FAsStr)
+  {
+      // Convert farenheit to celsius
+      float num1;
+      num1 = (Float.valueOf(FAsStr).floatValue());
+      num1 *= (float)(KM_CONSTANT);
+      setKPH(num1);
+  }
+
+  public void convertKphToMph (String FAsStr)
+  {
+      // Convert farenheit to celsius
+      float num1;
+      num1 = (Float.valueOf(FAsStr).floatValue());
+      num1 /= (float)(KM_CONSTANT);
+      setMPH(num1);
+  }
+
   public void setFahrenheit(float number){
     this.fahrenheit = number;
   }
@@ -390,10 +415,26 @@ public class Conversion
   }
 
   public void setKilogram(float number){
-    this.kilogram = number;
+        this.kilogram = number;
   }
 
   public void printKilogram(){
-    System.out.println("Kilogram = " + nf.format( this.kilogram));
+        System.out.println("Kilogram = " + nf.format( this.kilogram));
+  }
+
+  public void setKPH(float number){
+    this.kilometers_per_hour = number;
+  }
+
+  public void printKPH(){
+      System.out.println("Kilometers per hour = " + nf.format( this.kilometers_per_hour));
+  }
+
+  public void setMPH(float number){
+      this.miles_per_hour = number;
+  }
+
+  public void printMPH(){
+      System.out.println("Mile per Hour = " + nf.format( this.miles_per_hour));
   }
 }
