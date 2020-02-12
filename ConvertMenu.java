@@ -14,8 +14,7 @@ import static java.lang.Thread.sleep;
 
 public class ConvertMenu
 {
-  Locale locale = Locale.ENGLISH;
-  NumberFormat nf = NumberFormat.getNumberInstance(locale);
+
   
   //constant variables for easy editing of values
   final int zero = 0;
@@ -32,6 +31,7 @@ public class ConvertMenu
   final int eleven = 11;
   final int twelve = 12;
   final int thirteen = 13;
+  final int fourteen = 14;
   final int exit = 99;
   
   /**
@@ -67,7 +67,7 @@ public class ConvertMenu
       userMenuChoice = inputInteger("Enter choice: "); // gets user's choice
       
       // print error if user did not enter a correct choice
-      if (userMenuChoice < zero || (userMenuChoice > thirteen && userMenuChoice != exit))
+      if (userMenuChoice < zero || (userMenuChoice > fourteen && userMenuChoice != exit))
       {
         System.out.println("You entered: " + userMenuChoice + " which is not a valid choice");
         System.out.println("Please choose again");
@@ -77,88 +77,118 @@ public class ConvertMenu
         switch (userMenuChoice)
         {
           case zero:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Fahrenheit: ");
             result = cv.convertF2C(userNumber);
-            System.out.println("Celcius = " + nf.format(result));
+            cv.setFahrenheit(result);
+            cv.printFahrenheit();
             break;
           case one:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Celsius: ");
             result = cv.convertC2F(userNumber);
-            System.out.println("Fahrenheit = " + nf.format(result));
+            cv.setCelsius(result);
+            cv.printCelsius();
+            //System.out.println("Fahrenheit = " + nf.format(result));
             break;
           case two:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Inch: ");
             result = cv.convertIn2Cm(userNumber);
-            System.out.print("Centimeter = " + nf.format(result));
+            cv.setInch(result);
+            cv.printInch();
+            //System.out.print("Centimeter = " + nf.format(result));
             break;
           case three:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Centimeter: ");
             result = cv.convertCm2In(userNumber);
-            System.out.println("Inch = " + nf.format(result));
+            cv.setCentimeter(result);
+            cv.printCentimeter();
+            //System.out.println("Inch = " + nf.format(result));
             break;
           case four:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Feet: ");
             result = cv.convertF2M(userNumber);
-            System.out.println("Meter = " + nf.format(result));
+            cv.setFeet(result);
+            cv.printFeet();
+            //System.out.println("Meter = " + nf.format(result));
             break;
           case five:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Meter: ");
             result = cv.convertM2F(userNumber);
-            System.out.println("Feet = " + nf.format(result));
+            cv.setMeter(result);
+            cv.printMeter();
+            //System.out.println("Feet = " + nf.format(result));
             break;
           case six:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Mile: ");
             result = cv.convertM2K(userNumber);
-            System.out.println("Kilometer = " + nf.format(result));
+            cv.setMile(result);
+            cv.printMile();
+            //System.out.println("Kilometer = " + nf.format(result));
             break;
           case seven:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Kilometer: ");
             result = cv.convertK2M(userNumber);
-            System.out.println("Mile = " + nf.format(result));
+            cv.setKilometer(result);
+            cv.printKilometer();
+            //System.out.println("Mile = " + nf.format(result));
             break;
           case eight:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Gallon: ");
             result = cv.convertG2L(userNumber);
-            System.out.println("Liter = " + nf.format(result));
+            cv.setGallon(result);
+            cv.printGallon();
+            //System.out.println("Liter = " + nf.format(result));
             break;
           case nine:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Liter: ");
             result = cv.convertL2G(userNumber);
-            System.out.println("Gallon = " + nf.format(result));
+            cv.setLiter(result);
+            cv.printLiter();
+            //System.out.println("Gallon = " + nf.format(result));
             break;
           case ten:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Ounce: ");
             result = cv.convertOz2G(userNumber);
-            System.out.println("Gram = " + nf.format(result));
+            cv.setOunce(result);
+            cv.printOunce();
+            //System.out.println("Gram = " + nf.format(result));
             break;
           case eleven:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Gram: ");
             result = cv.convertG2Oz(userNumber);
-            System.out.println("Ounce = " + nf.format(result));
+            cv.setGram(result);
+            cv.printGram();
+            //System.out.println("Ounce = " + nf.format(result));
             break;
           case twelve:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Pound: ");
             result = cv.convertLb2K(userNumber);
-            System.out.println("Kilogram = " + nf.format(result));
+            cv.setPound(result);
+            cv.printPound();
+            //System.out.println("Kilogram = " + nf.format(result));
             break;
           case thirteen:
-            chooseDecimal();
+            //chooseDecimal();
             userNumber = numberInStringFormat("Enter Kilogram: ");
             result = cv.convertK2Lb(userNumber);
-            System.out.println("Kilogram = " + nf.format(result));
+            cv.setKilogram(result);
+            cv.printKilogram();
+            //System.out.println("Kilogram = " + nf.format(result));
+            break;
+          case fourteen:
+            cv.chooseDecimal();
             break;
           case exit: // allows the user to terminate the program
             System.out.println("Thank you for using this program. Good bye!");
@@ -196,23 +226,12 @@ public class ConvertMenu
     System.out.println("*    Convert From Gram to Ounce            *            11           *");
     System.out.println("*    Convert From Pound to Kilogram        *            12           *");
     System.out.println("*    Convert From Kilogram to Pound        *            13           *");
+    System.out.println("*    Set the decimal point accuracy        *            14           *");
     System.out.println("*           Quit Program                   *            99           *");
     System.out.println("**********************************************************************\n");
   }
   
-  public int chooseDecimal()
-  {
-    int dec = -1;
-    do
-    {
-      dec = inputInteger("Specify decimal number (between 0 and 4): ");
-    } while (dec < 0 || dec >4 );
-    //set decimal format
-    nf.setMinimumFractionDigits(dec);
-    nf.setMaximumFractionDigits(dec);
-    return dec;
-  }
-  
+
   /**
    * inputInteger
    *
