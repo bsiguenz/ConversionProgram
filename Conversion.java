@@ -292,149 +292,26 @@ public class Conversion
     return(num2);
   }
 
-  public void convertMphToKph (String FAsStr)
+  public float convertMphToKph (String FAsStr)
   {
       // Convert farenheit to celsius
       float num1;
       num1 = (Float.valueOf(FAsStr).floatValue());
       num1 *= (float)(KM_CONSTANT);
-      setKPH(num1);
+      return num1;
   }
 
-  public void convertKphToMph (String FAsStr)
+  public float convertKphToMph (String FAsStr)
   {
       // Convert farenheit to celsius
       float num1;
       num1 = (Float.valueOf(FAsStr).floatValue());
       num1 /= (float)(KM_CONSTANT);
-      setMPH(num1);
+      return num1;
   }
 
-  public void setFahrenheit(float number){
-    this.fahrenheit = number;
-  }
-
-  public void printFahrenheit(){
-    System.out.println("Fahrenheit = " + nf.format(fahrenheit));
-  }
-
-  public void setCelsius(float number){
-    this.celsius = number;
-  }
-
-  public void printCelsius(){
-    System.out.println("Celcius = " + nf.format(celsius));
-  }
-
-  public void setInch(float number){
-    this.inch = number;
-  }
-
-  public void printInch(){
-    System.out.println("Inch = " + nf.format(inch));
-  }
-
-  public void setCentimeter(float number){
-    this.centimeter = number;
-  }
-
-  public void printCentimeter(){
-    System.out.println("Centimeter = " + nf.format( this.inch));
-  }
-
-  public void setFeet(float number){
-    this.feet = number;
-  }
-
-  public void printFeet(){
-    System.out.println("Feet = " + nf.format( this.feet));
-  }
-
-  public void setMeter(float number){
-    this.meter = number;
-  }
-
-  public void printMeter(){
-    System.out.println("Meter = " + nf.format( this.meter));
-  }
-
-  public void setMile(float number){
-    this.mile = number;
-  }
-
-  public void printMile(){
-    System.out.println("Mile = " + nf.format( this.mile));
-  }
-
-  public void setKilometer(float number){
-    this.kilometer = number;
-  }
-
-  public void printKilometer(){
-    System.out.println("Kilometer = " + nf.format( this.kilometer));
-  }
-
-  public void setGallon(float number){
-    this.gallon = number;
-  }
-
-  public void printGallon(){
-    System.out.println("Gallon = " + nf.format( this.gallon));
-  }
-
-  public void setLiter(float number){
-    this.liter = number;
-  }
-
-  public void printLiter(){
-    System.out.println("Litter = " + nf.format( this.liter));
-  }
-
-  public void setOunce(float number){
-    this.ounce = number;
-  }
-
-  public void printOunce(){
-    System.out.println("Ounce = " + nf.format( this.ounce));
-  }
-
-  public void setGram(float number){
-    this.gram = number;
-  }
-
-  public void printGram(){
-    System.out.println("Gram = " + nf.format( this.gram));
-  }
-
-  public void setPound(float number){
-    this.pound = number;
-  }
-
-  public void printPound(){
-    System.out.println("Pound = " + nf.format( this.pound));
-  }
-
-  public void setKilogram(float number){
-        this.kilogram = number;
-  }
-
-  public void printKilogram(){
-        System.out.println("Kilogram = " + nf.format( this.kilogram));
-  }
-
-  public void setKPH(float number){
-    this.kilometers_per_hour = number;
-  }
-
-  public void printKPH(){
-      System.out.println("Kilometers per hour = " + nf.format( this.kilometers_per_hour));
-  }
-
-  public void setMPH(float number){
-      this.miles_per_hour = number;
-  }
-
-  public void printMPH(){
-      System.out.println("Mile per Hour = " + nf.format( this.miles_per_hour));
+  public String printFormatted (float number)
+  {
+    return nf.format(number);
   }
 }
