@@ -81,7 +81,6 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Fahrenheit: ");
             result = cv.convertF2C(userNumber);
-
             formattedNumber = cv.printFormatted(result);
             System.out.println("Celsius = " + formattedNumber);
             break;
@@ -89,6 +88,7 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Celsius: ");
             result = cv.convertC2F(userNumber);
+
             formattedNumber = cv.printFormatted(result);
             System.out.println("Fahrenheit = " + formattedNumber);
             break;
@@ -103,6 +103,7 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Centimeter: ");
             result = cv.convertCm2In(userNumber);
+
             formattedNumber = cv.printFormatted(result);
             System.out.println("Inch = " + formattedNumber);
             break;
@@ -110,6 +111,7 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Feet: ");
             result = cv.convertF2M(userNumber);
+
             formattedNumber = cv.printFormatted(result);
             System.out.println("Meter = " + formattedNumber);
             break;
@@ -145,6 +147,7 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Liter: ");
             result = cv.convertL2G(userNumber);
+
             formattedNumber = cv.printFormatted(result);
             System.out.println("Gallon = " + formattedNumber);
             break;
