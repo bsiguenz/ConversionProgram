@@ -12,14 +12,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConversionTest {
     //Initialize the Conversion class
-    Conversion cv = new Conversion();
+    Conversion cv;
 
+    /**
+     * Initialize Conversion class instance
+     */
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
+        this.cv = new Conversion();
     }
 
+    /**
+     * Destroy Conversion class instance
+     */
     @org.junit.jupiter.api.AfterEach
     void tearDown() {
+        this.cv = null;
     }
 
     /**
