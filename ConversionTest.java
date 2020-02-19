@@ -33,27 +33,36 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Fahrenheit to Celsius
+     *
+     * Observability: output from cv.convertF2C
+     * Controllability: input into cv.convertF2C. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertF2C() {
+    void testConvertF2C() {
         assertEquals(cv.convertF2C("32"), 0.00);
     }
 
     /**
      * Test method to test the conversion:
      * From Celsius to Fahrenheit
+     *
+     * Observability: output from cv.convertC2F
+     * Controllability: input into cv.convertC2F. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertC2F() {
+    void testConvertC2F() {
         assertEquals(cv.convertC2F("0"), 32);
     }
 
     /**
      * Test method to test the conversion:
      * From Inch to Centimeter
+     *
+     * Observability: output from cv.convertIn2Cm. data in result and roundOff
+     * Controllability: input into cv.convertIn2Cm. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertIn2Cm() {
+    void testConvertIn2Cm() {
         double result = cv.convertIn2Cm("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -63,9 +72,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Centimeter to Inch
+     *
+     * Observability: output from cv.convertCm2In. data in result and roundOff
+     * Controllability: input into cv.convertCm2In. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertCm2In() {
+    void testConvertCm2In() {
         double result = cv.convertCm2In("2.54");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -75,9 +87,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Feet to Meter
+     *
+     * Observability: output from cv.convertF2M. data in result and roundOff
+     * Controllability: input into cv.convertF2M. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertF2M() {
+    void testConvertF2M() {
         double result = cv.convertF2M("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -87,9 +102,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Meter to Feet
+     *
+     * Observability: output from cv.convertM2F. data in result and roundOff
+     * Controllability: input into cv.convertM2F. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertM2F() {
+    void testConvertM2F() {
         double result = cv.convertM2F("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -99,9 +117,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Mile to Kilometer
+     *
+     * Observability: output from cv.convertM2K. data in result and roundOff
+     * Controllability: input into cv.convertM2K. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertM2K() {
+    void testConvertM2K() {
         double result = cv.convertM2K("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -111,9 +132,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Kilometer to Mile
+     *
+     * Observability: output from cv.convertK2M. data in result and roundOff
+     * Controllability: input into cv.convertK2M. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertK2M() {
+    void testConvertK2M() {
         double result = cv.convertK2M("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -123,9 +147,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Gallon to Liter
+     *
+     * Observability: output from cv.convertG2L. data in result and roundOff
+     * Controllability: input into cv.convertG2L. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertG2L() {
+    void testConvertG2L() {
         double result = cv.convertG2L("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -135,9 +162,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Liter to Gallon
+     *
+     * Observability: output from cv.convertL2G. data in result and roundOff
+     * Controllability: input into cv.convertL2G. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertL2G() {
+    void testConvertL2G() {
         double result = cv.convertL2G("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -147,9 +177,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Ounce to Gram
+     *
+     * Observability: output from cv.convertOz2G. data in result and roundOff
+     * Controllability: input into cv.convertOz2G. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertOz2G() {
+    void testConvertOz2G() {
         double result = cv.convertOz2G("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -159,9 +192,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Gram to Ounce
+     *
+     * Observability: output from cv.convertG2Oz. data in result and roundOff
+     * Controllability: input into cv.convertG2Oz. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertG2Oz() {
+    void testConvertG2Oz() {
         double result = cv.convertG2Oz("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -171,9 +207,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Pound to Kilogram
+     *
+     * Observability: output from cv.convertLb2K. data in result and roundOff
+     * Controllability: input into cv.convertLb2K. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertLb2K() {
+    void testConvertLb2K() {
         double result = cv.convertLb2K("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -183,9 +222,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Kilogram to Pound
+     *
+     * Observability: output from cv.convertK2Lb. data in result and roundOff
+     * Controllability: input into cv.convertK2Lb. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertK2Lb() {
+    void testConvertK2Lb() {
         double result = cv.convertK2Lb("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -195,9 +237,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Mile per hour to Kilometer per hour
+     *
+     * Observability: output from cv.convertMphToKph. data in result and roundOff
+     * Controllability: input into cv.convertMphToKph. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertMphToKph() {
+    void testConvertMphToKph() {
         double result = cv.convertMphToKph("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
@@ -207,9 +252,12 @@ class ConversionTest {
     /**
      * Test method to test the conversion:
      * From Kilometer per hour to Mile per hour
+     *
+     * Observability: output from cv.convertKphToMph. data in result and roundOff
+     * Controllability: input into cv.convertKphToMph. inputs into assertEquals
      */
     @org.junit.jupiter.api.Test
-    void convertKphToMph() {
+    void testConvertKphToMph() {
         double result = cv.convertKphToMph("1");
         //Round to 2 decimals
         double roundOff = Math.round(result * 100.0) / 100.0;
