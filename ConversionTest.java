@@ -2,7 +2,7 @@
  * Bryan Siguenza, Hieu Duong, Marco E. Ornelas
  * SWE 437-001
  * Assignment 4 : Unit Test
- * Last Date Modified: 2/15/2020
+ * Last Date Modified: 2/18/2020
  *
  * Purpose: Test all methods in Conversion class
  */
