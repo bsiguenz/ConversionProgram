@@ -7,14 +7,14 @@
  * Purpose: Output a menu for measurement conversion
  */
 
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Scanner;
+
 import static java.lang.Thread.sleep;
 
 public class ConvertMenu
 {
-  //constant variables for easy editing of values
+
+//constant variables for easy editing of values
   final int zero = 0;
   final int one = 1;
   final int two = 2;
@@ -64,8 +64,8 @@ public class ConvertMenu
     // main loop to display options and get user input
     do
     {
-      mainMenu(); // prints the main menu
-      userMenuChoice = inputInteger("Enter choice: "); // gets user's choice
+
+      userMenuChoice = mainUI();
       
       // print error if user did not enter a correct choice
       if (userMenuChoice < zero || (userMenuChoice > sixteen && userMenuChoice != exit))
@@ -147,7 +147,6 @@ public class ConvertMenu
             //chooseDecimal();
             userNumber = numberInStringFormat("Enter Liter: ");
             result = cv.convertL2G(userNumber);
-
             formattedNumber = cv.printFormatted(result);
             System.out.println("Gallon = " + formattedNumber);
             break;
@@ -207,7 +206,23 @@ public class ConvertMenu
       sleep(1000); // wait 1 second to display menu again and allow user to see the result/output
     } while (userMenuChoice != exit);
   }
-  
+
+  /*
+    main user interface deals with reading input from user
+    it also calls overloaded method to return value;
+   */
+  public int mainUI(){
+    int userMenuChoice;
+    mainMenu(); // prints the main menu
+    userMenuChoice = inputInteger("Enter choice: "); // gets user's choice
+    return mainUI(userMenuChoice);
+  }
+  /*
+    overload mainUI method to be able to test input
+   */
+  public int mainUI(int number){
+    return number;
+  }
   /**
    * mainMenu
    *
