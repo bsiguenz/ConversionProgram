@@ -8,7 +8,9 @@
  */
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConversionTest {
     //Initialize the Conversion class
@@ -31,6 +33,24 @@ class ConversionTest {
     }
 
     /**
+     * Test method to test the Convert Menu
+     * Choices range from 1-16, 99
+     *
+     * Observability: output from cm.mainUI specifies the menu choice. After value has been
+     * select the system prompts the user for the correct unit
+     * Controllability: input from inputInteger. is returned by UIMenu
+     *
+     */
+    @Test
+    void UIMenuTest() {
+        ConvertMenu cm = new ConvertMenu();
+        //mainUI over control over menu options
+        //if number is selected. the selected number should be returned
+        //without lose of control
+        assertEquals(1, cm.mainUI(1));
+    }
+
+    /**
      * Test method to test the conversion:
      * From Fahrenheit to Celsius
      *
@@ -41,6 +61,7 @@ class ConversionTest {
     void testConvertF2C() {
         assertEquals(cv.convertF2C("32"), 0.00);
     }
+
 
     /**
      * Test method to test the conversion:
