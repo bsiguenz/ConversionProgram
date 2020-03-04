@@ -310,6 +310,43 @@ public class Conversion
       return num1;
   }
 
+
+  public float convertMpG2KpL (String FAsStr)
+  {
+    // Convert miles per gallon to kilometers per liter
+    float num1;
+    num1 = (Float.valueOf(FAsStr).floatValue());
+    num1 /=  2.352;
+    return num1;
+  }
+
+  public float convertKpL2MpG (String FAsStr)
+  {
+    // Convert kilometers per liter to miles per gallon
+    float num1;
+    num1 = (Float.valueOf(FAsStr).floatValue());
+    num1 *=  2.825;
+    return num1;
+  }
+
+  public float convertKel2Cel (String FAsStr)
+  {
+    // Convert kilometers per liter to miles per gallon
+    float num1;
+    num1 = (Float.valueOf(FAsStr).floatValue());
+    num1 -=  273.15;
+    return num1;
+  }
+
+  public float convertCel2Kel (String FAsStr)
+  {
+    // Convert kilometers per liter to miles per gallon
+    float num1;
+    num1 = (Float.valueOf(FAsStr).floatValue());
+    num1 +=  273.15;
+    return num1;
+  }
+
   public String printFormatted (float number)
   {
     return nf.format(number);
