@@ -331,7 +331,7 @@ public class Conversion
 
   public float convertKel2Cel (String FAsStr)
   {
-    // Convert kilometers per liter to miles per gallon
+    // Convert Kelvin to Celsius
     float num1;
     num1 = (Float.valueOf(FAsStr).floatValue());
     num1 -=  273.15;
@@ -340,7 +340,7 @@ public class Conversion
 
   public float convertCel2Kel (String FAsStr)
   {
-    // Convert kilometers per liter to miles per gallon
+    // Convert Celsius to Kelvin
     float num1;
     num1 = (Float.valueOf(FAsStr).floatValue());
     num1 +=  273.15;
