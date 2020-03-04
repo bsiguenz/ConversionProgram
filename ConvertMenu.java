@@ -32,6 +32,10 @@ public class ConvertMenu
   final int fourteen = 14;
   final int fifteen = 15;
   final int sixteen = 16;
+  final int seventeen = 17;
+  final int eighteen = 18;
+  final int nineteen = 19;
+  final int twenty= 20;
   final int exit = 99;
   
   /**
@@ -68,7 +72,7 @@ public class ConvertMenu
       userMenuChoice = mainUI();
       
       // print error if user did not enter a correct choice
-      if (userMenuChoice < zero || (userMenuChoice > sixteen && userMenuChoice != exit))
+      if (userMenuChoice < zero || (userMenuChoice > twenty && userMenuChoice != exit))
       {
         System.out.println("You entered: " + userMenuChoice + " which is not a valid choice");
         System.out.println("Please choose again");
@@ -183,7 +187,6 @@ public class ConvertMenu
             result = cv.convertMphToKph(userNumber);
             formattedNumber = cv.printFormatted(result);
             System.out.println("Kilometers per Hour = " + formattedNumber);
-
             break;
           case fifteen:
             userNumber = numberInStringFormat("Enter Kilometers per Hour: ");
@@ -193,6 +196,30 @@ public class ConvertMenu
             break;
           case sixteen:
             cv.chooseDecimal();
+            break;
+          case seventeen:
+            userNumber = numberInStringFormat("Enter Milers per Gallon: ");
+            result = cv.convertMpG2KpL(userNumber);
+            formattedNumber = cv.printFormatted(result);
+            System.out.println("Kilometers per liter = " + formattedNumber);
+            break;
+          case eighteen:
+            userNumber = numberInStringFormat("Enter Kilometers per liter: ");
+            result = cv.convertKpL2MpG(userNumber);
+            formattedNumber = cv.printFormatted(result);
+            System.out.println("Miles per gallon = " + formattedNumber);
+            break;
+          case nineteen:
+            userNumber = numberInStringFormat("Enter Kelvin: ");
+            result = cv.convertKel2Cel(userNumber);
+            formattedNumber = cv.printFormatted(result);
+            System.out.println("Celsius = " + formattedNumber);
+            break;
+          case twenty:
+            userNumber = numberInStringFormat("Enter Celsius: ");
+            result = cv.convertCel2Kel(userNumber);
+            formattedNumber = cv.printFormatted(result);
+            System.out.println("Kelvin = " + formattedNumber);
             break;
           case exit: // allows the user to terminate the program
             System.out.println("Thank you for using this program. Good bye!");
@@ -250,6 +277,10 @@ public class ConvertMenu
     System.out.println("*    Convert From MPH to KPH               *            14           *");
     System.out.println("*    Convert From KPH to MPH               *            15           *");
     System.out.println("*    Set the decimal point accuracy        *            16           *");
+    System.out.println("*    Convert from MPG to KPL               *            17           *");
+    System.out.println("*    Convert from KPL to MGP               *            18           *");
+    System.out.println("*    Convert from Kelvin to Celsius        *            19           *");
+    System.out.println("*    Convert from Celsius to Kelvin        *            20           *");
     System.out.println("*           Quit Program                   *            99           *");
     System.out.println("**********************************************************************\n");
   }
