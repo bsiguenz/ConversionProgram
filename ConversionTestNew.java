@@ -1,3 +1,12 @@
+/**
+ * Bryan Siguenza, Hieu Duong, Marco E. Ornelas
+ * SWE 437-001
+ * Assignment 4 : Unit Test
+ * Last Date Modified: 3/04/2020
+ *
+ * Purpose: Test all methods in Conversion class
+ */
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,10 +17,18 @@ class ConversionTestNew {
     //Initialize the Conversion class
     Conversion cv;
 
+    /**
+     * Initialize Conversion class instance
+     */
+
     @BeforeEach
     void setUp() {
         this.cv = new Conversion();
     }
+
+    /**
+     * Destroy Conversion class instance
+     */
 
     @AfterEach
     void tearDown() {
