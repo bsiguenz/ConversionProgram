@@ -54,7 +54,7 @@ public class NodeTest {
 	}
 	
 	@Test
-	public void a1a2a3Test(){
+	public void testPath2(){
 	String[] inputPara = {"10","10","10","10","10","10","10"};
 	getResults(inputPara);
 	
