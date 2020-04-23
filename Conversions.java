@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Purpose: Teach us how important writing good code is. Also, convert different measurements
  */
 
-public class Conversion
+public class Conversions
 {
    
    Locale locale = Locale.ENGLISH;
@@ -40,7 +40,7 @@ public class Conversion
    
    
    //default constructor
-   Conversion(){
+   Conversions(){
       fahrenheit = 0;
       celsius = 0;
       inch = 0;

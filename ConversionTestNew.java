@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConversionTestNew {
     //Initialize the Conversion class
-    Conversion cv;
+    Conversions cv;
 
     /**
      * Initialize Conversion class instance
@@ -23,7 +23,7 @@ class ConversionTestNew {
 
     @BeforeEach
     void setUp() {
-        this.cv = new Conversion();
+        this.cv = new Conversions();
     }
 
     /**

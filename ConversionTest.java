@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ConversionTest extends ConvertMenu{
     //Initialize the Conversion class
-    Conversion cv;
+    Conversions cv;
     
     /**
      * Initialize Conversion class instance
@@ -25,7 +25,7 @@ class ConversionTest extends ConvertMenu{
     @org.junit.jupiter.api.BeforeEach
     void setUp() throws InterruptedException
     {
-        this.cv = new Conversion();
+        this.cv = new Conversions();
     
         InputStream sysInBackup = System.in; // backup System.in to restore it later
         ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());

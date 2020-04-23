@@ -63,7 +63,7 @@ public class ConvertMenu
     int userMenuChoice = -1; // -1 is to detect any errors
     String userNumber = "none";
     String formattedNumber = "";
-    Conversion cv = new Conversion();
+    Conversions cv = new Conversions();
     float result = -1;
     
     // main loop to display options and get user input
