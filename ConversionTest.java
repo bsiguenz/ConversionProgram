@@ -1,4 +1,4 @@
-/**
+/*
  * Bryan Siguenza, Hieu Duong, Marco E. Ornelas
  * SWE 437-001
  * Assignment 4 : Unit Test
@@ -10,18 +10,33 @@
 
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ConversionTest {
+class ConversionTest extends ConvertMenu{
     //Initialize the Conversion class
     Conversion cv;
-
+    
     /**
      * Initialize Conversion class instance
      */
     @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+    void setUp() throws InterruptedException
+    {
         this.cv = new Conversion();
+    
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
+        System.setIn(in);
+
+        driver();
+        // do your thing
+        
+        // optionally, reset System.in to its original
+        System.setIn(sysInBackup);
+        
     }
 
     /**

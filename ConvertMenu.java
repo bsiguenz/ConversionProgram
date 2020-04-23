@@ -8,6 +8,7 @@
  */
 
 import java.util.Scanner;
+import java.util.function.DoubleToIntFunction;
 
 import static java.lang.Thread.sleep;
 
