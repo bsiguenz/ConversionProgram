@@ -1,7 +1,12 @@
 import org.junit.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import java.io.IOException;
 
 public class NodeTest {
 	
@@ -52,6 +57,22 @@ public class NodeTest {
 		setInput("lb", p[6],driver);
 		getInput(driver);
 	}
+	
+	@Test
+   public void testPath1()
+   {
+      conversion c = new conversion();
+      try
+      {
+         String[] inputPara = {"abc","10","10","10","10","10","10"};
+         getResults(inputPara);
+         c.doPost(null, null);
+      }catch (IOException | ServletException | NullPointerException | NoSuchElementException e)
+      {
+         System.out.println("Expected Test Path 1 fail");
+      }
+   }
+	
 	
 	@Test
 	public void testPath2(){
