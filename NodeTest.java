@@ -1,16 +1,11 @@
 import org.junit.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-import java.io.IOException;
-
 public class NodeTest {
 	
-	
+	private boolean error = false;
 	private  double c = 0;
 	private  double cm = 0;
 	private  double m = 0;
@@ -58,21 +53,30 @@ public class NodeTest {
 		getInput(driver);
 	}
 	
+	public void getError(String[] p) {
+		
+		WebDriver driver = new HtmlUnitDriver();
+		driver.get("https://cs.gmu.edu:8443/offutt/servlet/conversion");
+		driver.findElement(By.name("clear")).click();
+		
+		setInput("F", p[0], driver);
+		setInput("in", p[1],driver);
+		setInput("ft", p[2],driver);
+		setInput("mi", p[3],driver);
+		setInput("gal", p[4],driver);
+		setInput("oz", p[5],driver);
+		setInput("lb", p[6],driver);
+		driver.findElement(By.name("submit")).click();
+		String code = ""+ driver.findElement(By.xpath("/html/body")).getText();
+		error = (code.equals(""))?true:false;
+	}
 	@Test
-   public void testPath1()
-   {
-      conversion c = new conversion();
-      try
-      {
-         String[] inputPara = {"abc","10","10","10","10","10","10"};
-         getResults(inputPara);
-         c.doPost(null, null);
-      }catch (IOException | ServletException | NullPointerException | NoSuchElementException e)
-      {
-         System.out.println("Expected Test Path 1 fail");
-      }
-   }
-	
+	public void testPath1(){
+		String[] inputPara = {"abc","10","10","10","10","10","10"};
+		getError(inputPara);
+		Assert.assertEquals(true,error);
+		
+	}
 	
 	@Test
 	public void testPath2(){
